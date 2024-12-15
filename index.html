@@ -3,189 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonials Carousel</title>
+    <title>Responsive Testimonials</title>
+
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Google Font (Poppins) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <style>
-        /* General Styling */
-        body {
+        * {
+            font-family: "Poppins", sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
+            box-sizing: border-box;
         }
 
-        /* Testimonial Carousel Container */
-        #testimonial-carousel {
+        .wrapper {
+            position: relative;
             width: 100%;
-            padding: 20px 0;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
-            box-sizing: border-box;
+            justify-content: center;
+            background: #ffffff; /* White background */
+            overflow: hidden;
         }
 
-        /* Testimonials Wrapper */
-        #testimonials {
+        .swiper {
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-            box-sizing: border-box;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
 
-        /* Swiper Container */
-        .swiper-container {
-            width: 90%; /* Takes up 90% of the screen */
-            max-width: 800px; /* Limits max width */
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        /* Swiper Slide Styling */
         .swiper-slide {
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
+            width: 320px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            background: #f9f9f9;
         }
 
-        /* Quote Symbol */
-        .quote {
-            font-size: 1.5em;
-            color: #007BFF;
+        .swiper-slide-active {
+            background: #ffffff;
+        }
+
+        .swiper-slide .slide-content {
+            position: relative;
+            width: 100%;
+            padding: 40px;
+            padding-top: 60px;
+            color: #333;
+        }
+
+        .swiper-slide .slide-content i {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 60px;
+            opacity: 0.1;
+            color: #4070f4;
+        }
+
+        .swiper-slide .slide-content h3 {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #4070f4;
+            line-height: 1.1;
+        }
+
+        .swiper-slide .slide-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
             margin-bottom: 10px;
         }
 
-        /* Testimonial Text */
-        .text {
-            color: #666;
-            font-size: 1em;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        /* Author */
-        .author {
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 0 0 15px 15px;
-            font-size: 0.9em;
-            color: #999;
-            font-weight: 600;
-            width: 100%;
-            text-align: center;
-        }
-
-        /* Pagination Styling */
-        .swiper-pagination-bullet {
-            background-color: #fff;
-            opacity: 1;
-            transition: background-color 0.3s;
-        }
-
-        .swiper-pagination-bullet-active {
-            background-color: #007BFF;
-        }
-
-        /* Responsive Fixes for Mobile */
-        @media screen and (max-width: 768px) {
-            .swiper-container {
-                width: 95%; /* Adjusts width for smaller screens */
-            }
+        @media (max-width: 768px) {
             .swiper-slide {
-                padding: 15px; /* Slightly less padding */
-            }
-            .text {
-                font-size: 0.9em; /* Smaller text size */
-            }
-            .author {
-                font-size: 0.8em;
+                width: 280px;
             }
         }
     </style>
 </head>
 <body>
-
-<!-- Testimonial Carousel -->
-<div id="testimonial-carousel">
-    <div id="testimonials">
-        <div class="swiper-container">
+    <section class="wrapper">
+        <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <!-- All Testimonials -->
+                <!-- Testimonial Slide -->
                 <div class="swiper-slide">
-                    <div class="quote">“</div>
-                    <div class="text">I ranked number 23 on the Tap Competitions Tap and Win! I'm over the moon and can't wait to receive my money!</div>
-                    <div class="author">Rachael H - Gateway Access</div>
+                    <div class="slide-content">
+                        <i class="fas fa-quote-right"></i>
+                        <p>I ranked number 23 on the Tap Competitions Tap and Win! I'm over the moon and can't wait to receive my money!</p>
+                        <h3>Rachael H <br /><span>Gateway Access</span></h3>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="quote">“</div>
-                    <div class="text">I was pretty skeptical about this at first, but I was offered an entry at a reduced price, so I thought I would give it a go...</div>
-                    <div class="author">John B - Gateway Access</div>
+                    <div class="slide-content">
+                        <i class="fas fa-quote-right"></i>
+                        <p>I was skeptical about this at first, but I gave it a go and ranked 8th. I got $150, and the process was seamless!</p>
+                        <h3>John B <br /><span>Gateway Access</span></h3>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="quote">“</div>
-                    <div class="text">I can’t believe I have won $150 from Tap Competitions! This is an incredible game, and they are very quick at getting ahold of the winners...</div>
-                    <div class="author">Shaelee R - Gateway Access</div>
+                    <div class="slide-content">
+                        <i class="fas fa-quote-right"></i>
+                        <p>I can’t believe I won $150 from Tap Competitions! Incredible experience and quick to organize the payout. Thank you!</p>
+                        <h3>Shaelee R <br /><span>Gateway Access</span></h3>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="quote">“</div>
-                    <div class="text">As soon as I saw Tap Competitions pop up on my Facebook feed I was intrigued, I sat on it for a while and eventually signed up...</div>
-                    <div class="author">Melissa M - Gateway Access</div>
+                    <div class="slide-content">
+                        <i class="fas fa-quote-right"></i>
+                        <p>As soon as I saw Tap Competitions pop up on my Facebook feed I was intrigued. I eventually signed up and won $150 off their first tap competition giveaway! I’m excited to see what’s next!</p>
+                        <h3>Melissa M <br /><span>Gateway Access</span></h3>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="quote">“</div>
-                    <div class="text">Easiest $150 I won in my life. Really appreciate it. Received my money today. Thank you so much.</div>
-                    <div class="author">Chiquita G - Gateway Access</div>
+                    <div class="slide-content">
+                        <i class="fas fa-quote-right"></i>
+                        <p>Easiest $150 I’ve ever won in my life. Really appreciate it. Received my money today. Thank you so much.</p>
+                        <h3>Chiquita G <br /><span>Gateway Access</span></h3>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="quote">“</div>
-                    <div class="text">Tap Competitions is definitely a unique competition, and I was one of the winners. The process is fair, and everyone has an equal chance...</div>
-                    <div class="author">Damian - Gateway Access</div>
+                    <div class="slide-content">
+                        <i class="fas fa-quote-right"></i>
+                        <p>Tap Competitions is definitely a unique competition. The process is fair, and everyone has an equal chance to win. Great work by the team – worth checking out and entering!</p>
+                        <h3>Damian <br /><span>Gateway Access</span></h3>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="quote">“</div>
-                    <div class="text">Just wanted to reach out to give a big thanks. I received $100 in the first 10 minutes of signing up. Thanks for pulling through...</div>
-                    <div class="author">Ryan B - Gateway Access</div>
+                    <div class="slide-content">
+                        <i class="fas fa-quote-right"></i>
+                        <p>Just wanted to reach out to give a big thanks. I received $100 in the first 10 minutes of signing up. Thanks for pulling through, can’t wait to see what the brand offers in the future.</p>
+                        <h3>Ryan B <br /><span>Gateway Access</span></h3>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="quote">“</div>
-                    <div class="text">I actually got $100 from Tap Competitions! I couldn't believe it, all I did was sign up!</div>
-                    <div class="author">Crystal - Gateway Access</div>
+                    <div class="slide-content">
+                        <i class="fas fa-quote-right"></i>
+                        <p>I actually got $100 from Tap Competitions! I couldn’t believe it, all I did was sign up!</p>
+                        <h3>Crystal <br /><span>Gateway Access</span></h3>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="quote">“</div>
-                    <div class="text">I came 24th out of the 25 winners in the $150 competition! So excited for the next one!</div>
-                    <div class="author">Ellie G - Gateway Access</div>
+                    <div class="slide-content">
+                        <i class="fas fa-quote-right"></i>
+                        <p>I came 24th out of the 25 winners in the $150 competition! So excited for the next one!</p>
+                        <h3>Ellie G <br /><span>Gateway Access</span></h3>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="quote">“</div>
-                    <div class="text">Tap Competitions is legit! I didn’t think it was real, but I waited in the queue, clicked on the arrow, and now I’m $150 richer!</div>
-                    <div class="author">Sarah A - Gateway Access</div>
+                    <div class="slide-content">
+                        <i class="fas fa-quote-right"></i>
+                        <p>Tap Competitions is legit! I didn’t think it was real, but I waited in the queue, clicked on the arrow, and now I’m $150 richer! This is a great game to play, especially with the cost of living being so high right now.</p>
+                        <h3>Sarah A <br /><span>Gateway Access</span></h3>
+                    </div>
                 </div>
             </div>
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
         </div>
-    </div>
-</div>
+    </section>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
-</script>
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            loop: true,
+        });
+    </script>
 </body>
 </html>
