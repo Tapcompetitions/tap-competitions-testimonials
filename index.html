@@ -10,29 +10,35 @@
         /* Container for Isolation */
         #testimonial-carousel {
             width: 100%;
-            overflow-x: hidden;
             font-family: 'Poppins', sans-serif;
             color: #333;
-            padding: 20px 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
 
         /* Testimonial Section Styling */
         #testimonial-carousel #testimonials {
             width: 100%;
             max-width: 1200px;
-            padding: 20px 20px;
-            text-align: center;
+            padding: 20px;
             margin: 0 auto;
+            text-align: center;
         }
 
         /* Swiper container */
         #testimonial-carousel .swiper-container {
             width: 100%;
-            max-width: 800px; /* Fixed width for desktop */
-            padding: 20px 0;
+            max-width: 800px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         /* Swiper slide */
@@ -46,11 +52,12 @@
             justify-content: space-between;
             box-sizing: border-box;
             margin: 0 auto;
+            text-align: center;
         }
 
         #testimonial-carousel .quote {
             font-size: 1.5em;
-            color: #007BFF; /* Changed to Blue */
+            color: #007BFF; /* Blue */
             margin-bottom: 10px;
         }
 
@@ -72,13 +79,13 @@
 
         /* Pagination styling */
         #testimonial-carousel .swiper-pagination-bullet {
-            background-color: #fff; /* White dots */
+            background-color: #fff;
             opacity: 1;
             transition: background-color 0.3s;
         }
 
         #testimonial-carousel .swiper-pagination-bullet-active {
-            background-color: #007BFF; /* Active dot changed to Blue */
+            background-color: #007BFF;
         }
     </style>
 </head>
@@ -88,7 +95,7 @@
     <div id="testimonials">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <!-- Full Testimonials without shortening -->
+                <!-- All Testimonials -->
                 <div class="swiper-slide">
                     <div class="quote">“</div>
                     <div class="text">I ranked number 23 on the Tap Competitions Tap and Win! I'm over the moon and can't wait to receive my money!</div>
@@ -136,11 +143,10 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="quote">“</div>
-                    <div class="text">Tap Competitions is legit! I didn’t think it was real, but I waited in the queue, clicked on the arrow, and now I’m $150 richer! This is a great game to play, especially with the cost of living being so high right now. Made my day! Can’t wait for the next one! ❤️</div>
+                    <div class="text">Tap Competitions is legit! I didn’t think it was real, but I waited in the queue, clicked on the button, and now I’m $150 richer! This is a great game to play, especially with the cost of living being so high right now. Made my day! Can’t wait for the next one! ❤️</div>
                     <div class="author">Sarah A - Gateway Access</div>
                 </div>
             </div>
-
             <!-- Pagination only -->
             <div class="swiper-pagination"></div>
         </div>
@@ -162,4 +168,3 @@
 
 </body>
 </html>
-
