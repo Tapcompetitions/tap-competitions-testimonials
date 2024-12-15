@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isolated Testimonials Carousel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* Container for Isolation */
+        #testimonial-carousel {
+            width: 100%;
+            overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Testimonial Section Styling */
+        #testimonial-carousel #testimonials {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px 20px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        /* Swiper container */
+        #testimonial-carousel .swiper-container {
+            width: 100%;
+            max-width: 800px; /* Fixed width for desktop */
+            padding: 20px 0;
+        }
+
+        /* Swiper slide */
+        #testimonial-carousel .swiper-slide {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        #testimonial-carousel .quote {
+            font-size: 1.5em;
+            color: #007BFF; /* Changed to Blue */
+            margin-bottom: 10px;
+        }
+
+        #testimonial-carousel .text {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #testimonial-carousel .author {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 0 0 15px 15px;
+            font-size: 0.9em;
+            color: #999;
+            font-weight: 600;
+        }
+
+        /* Pagination styling */
+        #testimonial-carousel .swiper-pagination-bullet {
+            background-color: #fff; /* White dots */
+            opacity: 1;
+            transition: background-color 0.3s;
+        }
+
+        #testimonial-carousel .swiper-pagination-bullet-active {
+            background-color: #007BFF; /* Active dot changed to Blue */
+        }
+    </style>
+</head>
+<body>
+
+<div id="testimonial-carousel">
+    <div id="testimonials">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Full Testimonials without shortening -->
+                <div class="swiper-slide">
+                    <div class="quote">“</div>
+                    <div class="text">I ranked number 23 on the Tap Competitions Tap and Win! I'm over the moon and can't wait to receive my money!</div>
+                    <div class="author">Rachael H - Gateway Access</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="quote">“</div>
+                    <div class="text">I was pretty skeptical about this at first, but I was offered an entry at a reduced price, so I thought I would give it a go. I got the text at 7:30 pm Sunday night and then had a countdown of 30 minutes. Once the countdown was over, I hit the blue button. About a minute or two later, I received an email saying that I ranked 8th. I got a phone call today to organize payment of $150 and have received it. I will definitely have a crack at the next competition!</div>
+                    <div class="author">John B - Gateway Access</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="quote">“</div>
+                    <div class="text">I can’t believe I have won $150 from Tap Competitions! This is an incredible game, and they are very quick at getting ahold of the winners. They are lovely people to speak with. Thank you so, so much for letting me be a part of this competition. I will definitely be joining more of the Tap Competitions events!</div>
+                    <div class="author">Shaelee R - Gateway Access</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="quote">“</div>
+                    <div class="text">As soon as I saw Tap Competitions pop up on my Facebook feed I was intrigued, I sat on it for a while and eventually signed up and won $150 off their first tap competition giveaway! I am very excited to see what future giveaways they have and will DEFINITELY be signing up!</div>
+                    <div class="author">Melissa M - Gateway Access</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="quote">“</div>
+                    <div class="text">Easiest $150 I won in my life. Really appreciate it. Received my money today. Thank you so much.</div>
+                    <div class="author">Chiquita G - Gateway Access</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="quote">“</div>
+                    <div class="text">Tap Competitions is definitely a unique competition, and I was one of the winners in the previous competition. The process is fair, and everyone has an equal chance to win, unlike other competitions that require you to buy multiple tickets to increase your chances. Great work by the team – worth checking out and entering!</div>
+                    <div class="author">Damian - Gateway Access</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="quote">“</div>
+                    <div class="text">Just wanted to reach out to give a big thanks. I received $100 in the first 10 minutes of signing up. Thanks for pulling through, can't wait to see what the brand offers in the future.</div>
+                    <div class="author">Ryan B - Gateway Access</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="quote">“</div>
+                    <div class="text">I actually got $100 from Tap Competitions! I couldn't believe it, all I did was sign up!</div>
+                    <div class="author">Crystal - Gateway Access</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="quote">“</div>
+                    <div class="text">I came 24th out of the 25 winners in the $150 competition! So excited for the next one!</div>
+                    <div class="author">Ellie G - Gateway Access</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="quote">“</div>
+                    <div class="text">Tap Competitions is legit! I didn’t think it was real, but I waited in the queue, clicked on the button, and now I’m $150 richer! This is a great game to play, especially with the cost of living being so high right now. Made my day! Can’t wait for the next one! ❤️</div>
+                    <div class="author">Sarah A - Gateway Access</div>
+                </div>
+            </div>
+
+            <!-- Pagination only -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('#testimonial-carousel .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        pagination: {
+            el: '#testimonial-carousel .swiper-pagination',
+            clickable: true,
+        }
+    });
+</script>
+
+</body>
+</html>
+
