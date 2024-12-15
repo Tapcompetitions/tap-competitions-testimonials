@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isolated Testimonials Carousel</title>
+    <title>Testimonials Carousel</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
@@ -17,13 +17,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
         }
 
         /* Testimonial Section Styling */
         #testimonial-carousel #testimonials {
             width: 100%;
             max-width: 1200px;
-            padding: 20px 20px;
+            padding: 20px;
             text-align: center;
             margin: 0 auto;
         }
@@ -31,7 +32,11 @@
         /* Swiper container */
         #testimonial-carousel .swiper-container {
             width: 100%;
-            max-width: 800px; /* Fixed width for desktop */
+            max-width: 800px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 20px 0;
         }
 
@@ -40,17 +45,18 @@
             background-color: #fff;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
             box-sizing: border-box;
-            margin: 0 auto;
+            text-align: center;
         }
 
         #testimonial-carousel .quote {
             font-size: 1.5em;
-            color: #007BFF; /* Changed to Blue */
+            color: #007BFF; /* Blue color */
             margin-bottom: 10px;
         }
 
@@ -72,13 +78,13 @@
 
         /* Pagination styling */
         #testimonial-carousel .swiper-pagination-bullet {
-            background-color: #fff; /* White dots */
+            background-color: #fff;
             opacity: 1;
             transition: background-color 0.3s;
         }
 
         #testimonial-carousel .swiper-pagination-bullet-active {
-            background-color: #007BFF; /* Active dot changed to Blue */
+            background-color: #007BFF;
         }
     </style>
 </head>
@@ -88,7 +94,7 @@
     <div id="testimonials">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <!-- Full Testimonials without shortening -->
+                <!-- Testimonials -->
                 <div class="swiper-slide">
                     <div class="quote">“</div>
                     <div class="text">I ranked number 23 on the Tap Competitions Tap and Win! I'm over the moon and can't wait to receive my money!</div>
@@ -136,12 +142,11 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="quote">“</div>
-                    <div class="text">Tap Competitions is legit! I didn’t think it was real, but I waited in the queue, clicked on the button, and now I’m $150 richer! This is a great game to play, especially with the cost of living being so high right now. Made my day! Can’t wait for the next one! ❤️</div>
+                    <div class="text">Tap Competitions is legit! I didn’t think it was real, but I waited in the queue, clicked on the arrow, and now I’m $150 richer! This is a great game to play, especially with the cost of living being so high right now. Made my day! Can’t wait for the next one! ❤️</div>
                     <div class="author">Sarah A - Gateway Access</div>
                 </div>
             </div>
-
-            <!-- Pagination only -->
+            <!-- Pagination -->
             <div class="swiper-pagination"></div>
         </div>
     </div>
@@ -162,4 +167,3 @@
 
 </body>
 </html>
-
