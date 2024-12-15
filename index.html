@@ -40,6 +40,7 @@
             width: 320px;
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
             background: #f9f9f9;
+            transition: background 0.3s ease;
         }
 
         .swiper-slide-active {
@@ -89,7 +90,7 @@
     <section class="wrapper">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <!-- Testimonial Slide -->
+                <!-- Testimonial Slides -->
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <i class="fas fa-quote-right"></i>
@@ -180,11 +181,9 @@
                 slideShadows: true,
             },
             loop: true,
+            observer: true, // Ensures proper initialization
+            observeParents: true // Ensures proper initialization on viewport change
         });
-
-        // Ensure Swiper reinitializes on page load and resize
-        window.addEventListener('load', () => swiper.update());
-        window.addEventListener('resize', () => swiper.update());
     </script>
 </body>
 </html>
